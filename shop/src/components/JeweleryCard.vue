@@ -26,16 +26,30 @@ console.log(items)
 
     <div class="box">
 
-        <div v-for="item in items" class="card mx-auto bg-light" style="width: 18rem;">
-            <img :src="item.image" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h1>{{ item.title }}</h1>
+        <div v-for="item in items" class="card mb-4" style="max-width: 400px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img :src="item.image" class="img-fluid rounded-start">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ item.title }}</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <div class="card-footer">
+
+                            <h2>Price: {{ item.price }}$</h2>
+                            <button>Add to cart</button>
+                            <button>Read more</button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
             </div>
-            <div class="card-footer text-muted mx-auto">
-                <h2>Price: {{ item.price }}$</h2>
-                <button>Add to cart</button>
-                <button>Read more</button>
-            </div>
+
         </div>
 
     </div>
@@ -58,10 +72,14 @@ console.log(items)
 .card-body {
     display: flex;
     flex-direction: column;
+    
 }
 
 .card-footer {
+    display: flex;
     background: transparent;
     border-top: 0px;
+    flex-direction: column;
+    
 }
 </style>

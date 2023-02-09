@@ -37,7 +37,7 @@ import { RouterLink} from "vue-router";
           </ul>
         </li>
         <li class="nav-item">
-            <RouterLink class="nav-link" to="/products">Partners</RouterLink>
+            <RouterLink class="nav-link" to="/">Partners</RouterLink>
         </li>
        
       </ul>
@@ -46,6 +46,7 @@ import { RouterLink} from "vue-router";
 </nav>
 
 <RouterView/>
+
 </template>
 <style scoped>
 .navbar-logo{

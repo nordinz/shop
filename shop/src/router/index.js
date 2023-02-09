@@ -20,11 +20,6 @@ const router = createRouter({
       name: "about",
       component: AboutView,
     },
-    // {
-    //   path: "/products",
-    //   name: "products",
-    //   component: ProductsView,
-    // },
     {
       path: "/electronics",
       name: "electronics",
