@@ -7,7 +7,7 @@ const items = ref([])
 /* GET */
 const getItems = () => {
     return axios
-        .get("https://fakestoreapi.com/products/category/jewelery")
+        .get("https://api.escuelajs.co/api/v1/products")
         .then((res) => items.value = res.data)
         .catch((error) => console.log(error))
 }
@@ -29,13 +29,12 @@ console.log(items)
         <div v-for="item in items" class="card mb-4" style="max-width: 400px;">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img :src="item.image" class="img-fluid rounded-start">
+                    <img :src="item.images" class="img-fluid rounded-start">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">{{ item.title }}</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This content is a little bit longer.</p>
+                        <p class="card-text">{{ item.description }}</p>
                         <div class="card-footer">
 
                             <h2>Price: {{ item.price }}$</h2>

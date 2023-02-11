@@ -1,8 +1,12 @@
 
 <script setup>
 import { VueElement } from 'vue';
+import router from '../router/index';
 
 
+const goToJewelery = ()=>{
+ router.push( 'jewelery')
+}
 
 
 </script>
@@ -12,7 +16,7 @@ import { VueElement } from 'vue';
 <div class="first">
   <h2>Lorem, ipsum.</h2>
  <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, voluptas magnam veniam cum vitae doloribus quae unde nostrum recusandae. Harum vero amet eum sit at, vel rem eos facilis eaque!</p> 
- <RouterLink to="/jewelery"><button>Check out our jewlerey here</button></RouterLink>
+ <button @click="goToJewelery">Check out our jewlerey here</button>
 </div>
 <div class="second">
   <img class="img-fluid" src="../assets/Img/jewlery.jpg" alt="ring in box">
