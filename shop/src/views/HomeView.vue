@@ -4,7 +4,7 @@ import { VueElement } from 'vue';
 import router from '../router/index';
 
 
-const goToJewelery = () => {
+const goToProducts = () => {
   router.push('products')
 }
 
@@ -17,7 +17,7 @@ const goToJewelery = () => {
       <h2>Lorem, ipsum.</h2>
       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, voluptas magnam veniam cum vitae doloribus
         quae unde nostrum recusandae. Harum vero amet eum sit at, vel rem eos facilis eaque!</p>
-      <button class="btn-primary" @click="goToJewelery">Check out our products here</button>
+      <button class="btn-primary" @click="goToProducts">Check out our products here</button>
       
     </div>
     <div class="second">
@@ -47,8 +47,9 @@ const goToJewelery = () => {
   max-width: 1000px;
   margin: 0 auto;
   flex-direction: column;
-  padding-top: 100px;
+  padding-top: 70px;
   padding-bottom: 100px;
+  gap: 50px;
 
 }
 

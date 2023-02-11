@@ -17,6 +17,10 @@ import SignUp from './signUp.vue';
     </div>
 </template>
 <style scoped>
+.right p{
+    color: white;
+    font-size: 1.2em;
+}
 .footer {
     background-color: rgba(0, 0, 0, 0.5);
     height: 15vh;
@@ -27,7 +31,19 @@ import SignUp from './signUp.vue';
     justify-content: space-between;
     gap: 10px;
     padding: 10px;
+    
 }
-
-
+@media only screen and (max-width: 774px){
+.footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 30vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+   
+}}
 </style>

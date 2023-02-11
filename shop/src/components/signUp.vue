@@ -15,7 +15,7 @@ const email= useMailStore()
 <template>
 
 <div class="container-sign">
-  <div class="text-sign"><p>Signup for our newsletter!</p>
+  <div class="text-sign"><p>Signup for our newsletter! {{ email.email }}</p>
   </div>
   <div class="input">
     <input type="text" v-model="emailRef" placeholder="mailadress">
@@ -29,7 +29,9 @@ const email= useMailStore()
 <style scoped>
 body {
   padding: 2rem 0;
-  
+}
+.text-sign p{
+  color: white;
 }
 .container-sign{
   
