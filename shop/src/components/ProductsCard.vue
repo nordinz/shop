@@ -1,23 +1,33 @@
-<script setup>
-import axios from 'axios'
+<script>
+// import axios from 'axios'
 import { ref, onMounted } from 'vue'
+import {useProductStore} from '../stores/products'
 
 
-const items = ref([])
+// const items = ref([])
+export default{
+
+setup(){
+const emailRef = ref('')
+const {fetchProducts, products}= useProductStore()
+  return{ fetchProducts, items: products }
+}
+}
 
 /* GET */
-const getItems = () => {
-    return axios
-        .get("https://api.escuelajs.co/api/v1/products")
-        .then((res) => items.value = res.data)
-        .catch((error) => console.log(error))
-}
+// const getItems = () => {
+//     return axios
+//         .get("https://api.escuelajs.co/api/v1/products")
+//         .then((res) => items.value = res.data)
+//         .catch((error) => console.log(error))
+// }
 onMounted(() => {
-    getItems()
+    // getItems()
+    fetchProducts()
+
 })
 
 
-console.log(items)
 
 
 
@@ -25,7 +35,7 @@ console.log(items)
 
 <template>
 
-    <div class="box">
+    <div v-if="items" class="box">
 
      
 
@@ -39,7 +49,9 @@ console.log(items)
                         <h5 class="card-title">{{ item.title }}</h5>
                         <p class="card-text">{{ item.description }}</p>
                         <div class="card-footer text-muted mx-auto">
-                            <h2>Price: {{ item.price }}$</h2>
+                            
+                            <h2 v-if="item.price < 200" class="red">Special Price: {{ item.price }}$</h2>
+                            <h2 v-else>Price: {{ item.price }}$</h2>
                             <button>Add to cart</button>
                             <button>Read more</button>
                         </div>
@@ -63,6 +75,9 @@ console.log(items)
     gap: 20px;
 
 
+}
+.red{
+    color: red;
 }
 
 .card-body {

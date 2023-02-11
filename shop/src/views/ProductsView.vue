@@ -1,14 +1,13 @@
 <script setup>
-import Jew from "../components/JeweleryCard.vue"
+import Ele from "../components/ProductsCard.vue"
 </script>
 
 <template>
     <div class="center">
-        <h1>Jewelery Section</h1>
+        <h1>Electronics Section</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est culpa officiis vel natus doloremque, aliquid dignissimos expedita nihil incidunt ad dolor voluptatem maiores possimus cupiditate quaerat. Nemo velit soluta incidunt asperiores similique ab est, amet esse architecto ad eum officia.</p>
     
-<Jew/>
-
+<Ele/>
 </div>
 </template>
 
@@ -23,12 +22,5 @@ import Jew from "../components/JeweleryCard.vue"
   padding-top: 100px;
   padding-bottom: 100px;
   
-}
-.card-trans-enter-from{
-    transform: translateY(0);
-    opacity: 1;
-}
-.card-trans-enter-active{
-    transition: all 4s ease;
 }
 </style>
