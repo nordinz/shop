@@ -7,7 +7,7 @@ setup(){
 const emailRef = ref('')
 const email= useMailStore()
   return{ emailRef, email}
-}
+},
 }
 </script>
 
@@ -19,7 +19,7 @@ const email= useMailStore()
   </div>
   <div class="input">
     <input type="text" v-model="emailRef" placeholder="mailadress">
-    <p>{{ email }}</p>
+    
   </div>
   <button class="btn-signup" @click="email.submitEmail(emailRef)">Signup!</button>
 </div>
@@ -29,5 +29,9 @@ const email= useMailStore()
 <style scoped>
 body {
   padding: 2rem 0;
+  
+}
+.container-sign{
+  
 }
 </style>

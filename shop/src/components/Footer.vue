@@ -24,7 +24,10 @@ import SignUp from './signUp.vue';
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
 }
+
 
 </style>

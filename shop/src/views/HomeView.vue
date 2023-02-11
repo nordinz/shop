@@ -5,7 +5,7 @@ import router from '../router/index';
 
 
 const goToJewelery = () => {
-  router.push('jewelery')
+  router.push('products')
 }
 
 
@@ -17,7 +17,8 @@ const goToJewelery = () => {
       <h2>Lorem, ipsum.</h2>
       <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, voluptas magnam veniam cum vitae doloribus
         quae unde nostrum recusandae. Harum vero amet eum sit at, vel rem eos facilis eaque!</p>
-      <button @click="goToJewelery">Check out our jewlerey here</button>
+      <button class="btn-primary" @click="goToJewelery">Check out our products here</button>
+      
     </div>
     <div class="second">
       <img class="img-fluid" src="../assets/Img/jewlery.jpg" alt="ring in box">

@@ -1,12 +1,13 @@
-<script setup>
-
-
-</script>
-
 <template>
+    <div class="box">
 
-</template>
+     
 
-<style>
 
-</style>
+
+</div>
+  </template>
+  
+  <script setup>
+  
+  </script>

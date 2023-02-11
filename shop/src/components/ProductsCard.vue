@@ -1,29 +1,23 @@
-<script>
+<script setup>
 // import axios from 'axios'
 import { ref, onMounted } from 'vue'
-import {useProductStore} from '../stores/products'
+import axios from 'axios';
 
 
-// const items = ref([])
-export default{
 
-setup(){
-const emailRef = ref('')
-const {fetchProducts, products}= useProductStore()
-  return{ fetchProducts, items: products }
-}
-}
+const items = ref([])
+
 
 /* GET */
-// const getItems = () => {
-//     return axios
-//         .get("https://api.escuelajs.co/api/v1/products")
-//         .then((res) => items.value = res.data)
-//         .catch((error) => console.log(error))
-// }
+const getItems = () => {
+return axios
+         .get("https://api.escuelajs.co/api/v1/products")
+         .then((res) => items.value = res.data)
+         .catch((error) => console.log(error))
+}
 onMounted(() => {
-    // getItems()
-    fetchProducts()
+     getItems()
+    
 
 })
 
