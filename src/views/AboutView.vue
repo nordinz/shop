@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <div class="container" />
+<div><p>asfgaga</p></div>
 </template>
 
 <style></style>
