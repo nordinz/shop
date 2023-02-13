@@ -56,7 +56,16 @@ ul {
 }
 
 .active {
-  color: rgb(107, 166, 255);
+  color: var(--blue);
+  background-color: white;
+  padding: 5px 12px 5px 12px;
+  border-radius: 15px;
+}
+nav a li:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.386);
+  padding: 5px 12px 5px 12px;
+  border-radius: 15px;
 }
 
 @media only screen and (max-width: 900px) {
@@ -75,7 +84,5 @@ ul {
   }
 }
 
-nav a li:hover {
-  color: rgb(107, 166, 255);
-}
+
 </style>

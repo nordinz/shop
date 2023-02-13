@@ -37,6 +37,7 @@ import SignUp from "./SignUp.vue";
   height: 60vh;
   background-repeat: no-repeat;
   background-size: cover;
+
 }
 
 .container {
@@ -44,6 +45,7 @@ import SignUp from "./SignUp.vue";
   justify-content: space-around;
   align-items: center;
   height: 100%;
+  flex-direction: row;
 }
 
 .logo h1 {
@@ -85,7 +87,7 @@ import SignUp from "./SignUp.vue";
     align-items: center;
     height: 100%;
     justify-content: flex-end;
-    gap: 10px;
+    gap: 100px;
   }
   .box {
     width: 100%;
@@ -96,4 +98,5 @@ import SignUp from "./SignUp.vue";
     background-size: cover;
   }
 }
+
 </style>
