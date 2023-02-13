@@ -1,0 +1,17 @@
+:root{
+  --blue:rgb(0, 124, 207);
+}
+
+*{
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+ul, li{
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

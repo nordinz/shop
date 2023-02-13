@@ -1,22 +1,12 @@
 <script setup>
-
-
 import Nav from "./components/NavBar.vue";
-
-import Footer from "./components/Footer.vue"
-
-
+import Foot from "./components/FooterComp.vue";
 </script>
 
 <template>
- 
-<Nav/>
+  <Nav />
 
-
-<Footer/>
+  <Foot />
 </template>
 
-<style scoped>
-
-
-</style>
+<style scoped></style>

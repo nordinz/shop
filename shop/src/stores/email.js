@@ -1,14 +1,13 @@
+import { defineStore } from "pinia";
 
-import { defineStore } from 'pinia'
-
-export const useMailStore = defineStore('email', {
+export const useMailStore = defineStore("email", {
   state: () => {
-    return { email: '' }
+    return { email: "" };
   },
-  
+
   actions: {
     submitEmail(arg) {
-      this.email = arg
+      this.email = arg;
     },
   },
-})
+});

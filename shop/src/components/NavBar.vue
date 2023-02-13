@@ -1,65 +1,81 @@
-<script>
-import { RouterLink } from "vue-router";
-
-</script>
-
+<script setup></script>
 
 <template>
-  <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid ">
-      <a class="navbar-logo d-lg-none" href="">
-        <img src="../assets/Img/logo.png" class="navbar-logo">
-      </a>
-
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse " id="navbarNav">
-        <ul class="navbar-nav mx-auto">
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/">Home</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/about">About</RouterLink>
-          </li>
-          <li><a class="navbar-logo d-none d-lg-block " href="">
-              <img src="../assets/Img/logo.png" class="navbar-logo">
-            </a></li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/products">Products</RouterLink>
-          </li>
-          <li class="nav-item">
-            <RouterLink class="nav-link" to="/">Partners</RouterLink>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-  </nav>
-
+  <section class="header">
+    <p>Webshop!</p>
+    <nav>
+      <ul>
+        <router-link v-slot="{ isActive }" to="/">
+          <li :class="[isActive && 'active', 'link']">Home</li>
+        </router-link>
+        <router-link v-slot="{ isActive }" to="/products">
+          <li :class="[isActive && 'active', 'link']">Products</li>
+        </router-link>
+        <router-link v-slot="{ isActive }" to="/about">
+          <li :class="[isActive && 'active', 'link']">About</li>
+        </router-link>
+      </ul>
+    </nav>
+  </section>
   <RouterView />
-
 </template>
+
 <style scoped>
-.navbar-logo {
-  width: 150px;
-}
-
-.navbar .navbar-nav .nav-link {
-  font-size: 1.1em;
-  padding: 0 1em;
-  font-weight: 500;
-  text-decoration: none;
-  color: black;
-}
-
-.navbar-nav {
+.header {
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background-color: var(--blue);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  z-index: 99;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
-.navbar-logo {
-  width: 300px;
+.header p {
+  font-size: 2em;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+}
+
+nav,
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.link {
+  font-size: large;
+  font-weight: 700;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.active {
+  color: rgb(107, 166, 255);
+}
+
+@media only screen and (max-width: 900px) {
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+nav a li:hover {
+  color: rgb(107, 166, 255);
 }
 </style>
