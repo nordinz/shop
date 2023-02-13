@@ -88,6 +88,7 @@ import SignUp from "./SignUp.vue";
     height: 100%;
     justify-content: flex-end;
     gap: 100px;
+
   }
   .box {
     width: 100%;
@@ -97,6 +98,27 @@ import SignUp from "./SignUp.vue";
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .logo h1 {
+  font-size: 2em;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+}
+.company-t p {
+  font-size: 1em;
+  font-weight: 900;
+}
+.company-b {
+  font-size: 1em;
+  font-weight: 900;
+}
+.company-b h2 {
+  font-size: 1.5em;
+  font-weight: 900;
+}
+.company-t h2 {
+  font-size: 1.5em;
+  font-weight: 900;
+}
 }
 
 </style>
