@@ -1,0 +1,22 @@
+
+[
+    {
+        "id": "1",
+        "title": "Free shipping",
+        "info": "Lorem ipsum dolor sit amet, consectetur!",
+        "icon": "fluent-emoji:delivery-truck"
+    },
+    {
+        "id": "2",
+        "title": "Fast Deliverys",
+        "info": "Lorem ipsum dolor sit amet, consectetur!",
+        "icon": "fluent-emoji:red-heart"
+    },
+    {
+        "id": "3",
+        "title": "Great Promos",
+        "info": "Lorem ipsum dolor sit amet, consectetur!",
+        "icon": "fluent-emoji:money-with-wings"
+    }
+
+]
